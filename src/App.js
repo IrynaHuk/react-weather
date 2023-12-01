@@ -1,4 +1,5 @@
 import "./App.css";
+
 import axios from "axios";
 import React, { useState } from "react";
 
@@ -38,21 +39,27 @@ export default function App() {
   }
 
   return (
-    <div className="theWeather">
-      <h1>Weather App</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          onChange={updateCity}
-          placeholder="Type the name of the city"
-        />
-        <input type="submit" value="Search" className="searchButton" />
-      </form>
-      <h2>{title}</h2>
-      <div>{text}</div>
-      <div>
-        <img src={pic} alt="" />
+    <div>
+      <div className="theWeather">
+        <h1>Weather App</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            onChange={updateCity}
+            placeholder="Type the name of the city"
+          />
+          <input type="submit" value="Search" className="searchButton" />
+        </form>
+        <h2>{title}</h2>
+        <div>{text}</div>
+        <div>
+          <img src={pic} alt="" />
+        </div>
       </div>
+      <p className="repository">
+        <a href="https://github.com/IrynaHuk/react-weather">Open-source code</a>
+        , by Iryna Huk
+      </p>
     </div>
   );
 }
